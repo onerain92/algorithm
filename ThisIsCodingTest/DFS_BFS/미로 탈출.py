@@ -10,7 +10,6 @@ def solution(n, m, maze):
     DIRECTIONS = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
     while queue:
-        print(queue)
         current_x, current_y = queue.popleft()
 
         for direction in DIRECTIONS:
