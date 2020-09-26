@@ -20,8 +20,6 @@ def solution(n, teams):
     for i in range(n + 1):
         parent[i] = i
 
-    print(parent)
-
     for team in teams:
         operation, team1, team2 = team
         if operation == 0:
@@ -31,8 +29,6 @@ def solution(n, teams):
                 print('YES')
             else:
                 print('NO')
-
-    print("후: ", parent)
 
 
 print(solution(7, [[0, 1, 3], [1, 1, 7], [0, 7, 6], [1, 7, 1], [0, 3, 7], [0, 4, 2], [0, 1, 1], [1, 1, 1]]))
