@@ -24,7 +24,6 @@ def solution(food_times, k):
 
     # 남은 음식 중에서 몇 번째 음식인지 확인하여 출력
     result = sorted(queue, key=lambda x: x[1]) # 음식의 번호 기준으로 정렬
-    print(result)
     return result[(k - sum_value) % length][1]
 
 print(solution([3, 1, 2], 5))
