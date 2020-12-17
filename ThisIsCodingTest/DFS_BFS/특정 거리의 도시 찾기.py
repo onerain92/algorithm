@@ -24,11 +24,11 @@ def solution(k, x, routes):
     check = False
     for i in range(1, len(routes) + 1):
         if distance[i] == k:
-            print(i)
+            return i
             check = True
 
     if check == False:
-        print(-1)
+        return -1
 
 
 print(solution(2, 1, [[1, 2], [1, 3], [2, 3], [2, 4]]))

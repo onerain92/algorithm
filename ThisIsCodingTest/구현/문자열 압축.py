@@ -7,7 +7,6 @@ def solution(s):
         count = 1
 
         for j in range(step, len(s), step):
-            print("j: ", j)
             if prev == s[j:j + step]:
                 count += 1
             else:
@@ -21,8 +20,8 @@ def solution(s):
     return answer
 
 
-# print(solution('aabbaccc'))
+print(solution('aabbaccc'))
 print(solution('ababcdcdababcdcd'))
-# print(solution('abcabcdede'))
-# print(solution('abcabcabcabcdededededede'))
-# print(solution('xababcdcdababcdcd'))
+print(solution('abcabcdede'))
+print(solution('abcabcabcabcdededededede'))
+print(solution('xababcdcdababcdcd'))
