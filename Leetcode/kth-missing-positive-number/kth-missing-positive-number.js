@@ -14,7 +14,6 @@ var findKthPositive = function (arr, k) {
   return oneToThousand[k];
 };
 
-
 // Solution 2
 var findKthPositive = function (arr, k) {
   let oneToThousand = new Map();
@@ -31,3 +30,30 @@ var findKthPositive = function (arr, k) {
 
   return keys[k - 1];
 };
+
+// Solution 3
+var findKthPositive = function (arr, k) {
+  const n = arr.length;
+  let left = 0;
+  let right = n - 1;
+  let missing = compute(arr[n - 1], n);
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    missing = compute(arr[mid], mid + 1);
+
+    if (missing >= k) {
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  if (right === -1) return k;
+
+  return arr[right] + k - compute(arr[right], right + 1);
+};
+
+function compute(actual, expected) {
+  return actual - expected;
+}
