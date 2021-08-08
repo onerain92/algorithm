@@ -21,7 +21,7 @@ var numIslands = function(grid) {
 };
 
 function dfs(x, y, rowLength, columnLength, grid) {
-    grid[x][y] = '2';
+    grid[x][y] = '-1';
     
     if (x > 0 && grid[x - 1][y] === '1') {
         dfs(x - 1, y, rowLength, columnLength, grid);
