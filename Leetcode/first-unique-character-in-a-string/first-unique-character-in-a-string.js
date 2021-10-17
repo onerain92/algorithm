@@ -9,8 +9,6 @@ var firstUniqChar = function(s) {
         letterCount[s[i]] = letterCount[s[i]] + 1 || 1;
     }
     
-    console.log(letterCount)
-    
     for (let i = 0; i < s.length; i++) {
         if (letterCount[s[i]] === 1) {
             return i;
