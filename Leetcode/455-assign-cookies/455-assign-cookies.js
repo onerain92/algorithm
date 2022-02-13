@@ -10,10 +10,8 @@ var findContentChildren = function(g, s) {
     const greed = g.sort((a, b) => a - b);
     const cookies = s.sort((a, b) => a - b);
     
-    console.log(greed)
-    
-    for (let i in s) {
-        if (s[i] >= g[result]) result++;
+    for (let i in cookies) {
+      if (cookies[i] >= greed[result]) result++;
     }
     
     return result;
